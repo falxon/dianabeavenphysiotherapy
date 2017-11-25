@@ -29,11 +29,11 @@ $home["card"][1]["card_text"] = "things things things";
 $home["card"][1]["button"][0]["button_name"] = "Tighten our belts!";
 $home["card"][2]["card_title"] = "Contact us";
 $home["card"][2]["card_text0"] = "You can contact us on:";
-$home["card"][2]["list"][0]["list_content"] = "info@dianabeavenphysiotherapy.com";
+$home["card"][2]["list"][0]["list_content"] = "contact@dianabeavenphysiotherapy.com";
 $home["card"][2]["list"][1]["list_content"] = "07000 000001";
 $home["card"][2]["list"][2]["list_content"] = "Or contact us through this site";
 $home["card"][2]["card_text"] = "We are currently located in ". $location. ".";
-$home["card"][2]["button"][0]["button_name"] = "Contact us";
+$home["card"][2]["button"][0]["button_name"] = "Contact Form";
 $home["footer"][0]["website_name"] = "Diana Beaven Physiotherapy";
 
 $bodyModel = $home;
