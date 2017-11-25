@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">{{site_name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {{#navbutton}}
+            <li class="nav-item {{is_active}}">
+              <a class="nav-link" href="{{url}}">{{title}}
+                <span class="sr-only">{{raisin}}</span>
+              </a>
+            </li>
+            {{/navbutton}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Heading Row -->
+      {{#heading_row}}
+      <div class="row my-4">
+        <div class="col-lg-8">
+          <img class="img-fluid rounded" src="http://placehold.it/900x400" alt="">
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+          <h1>{{bs}}</h1>
+          <p>Physiotherapy helps restore movement and function following injury, illness or disability.​</p>
+
+          <p>We use exercise, manual therapy, education and advice. We maintain health for people of all ages, helping patients to manage pain and prevent disease, facilitate recovery and, enable people to maintain independence for longer.</p>
+          <a class="btn btn-primary btn-lg" href="#">Find out more</a>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+      {{/heading_row}}
+      <!-- /.row -->
+
+      <!-- Content Row -->
+      <div class="row">
+        
+        <!-- /.col-md-4 -->
+        {{#card}}
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">{{card_title}}</h2>
+              <p class="card-text">
+                {{card_text0}}
+                <ul>
+                    {{#list}}<li>{{list_content}}</li>{{/list}}
+                    
+                </ul>
+                {{card_text}}
+              </p>
+            </div>
+            <div class="card-footer">
+              {{#button}}<a href="{{url}}" class="btn btn-primary float-right">{{button_name}}</a>{{/button}}
+            </div>
+          </div>
+        </div>
+        {{/card}}
+        <!-- /.col-md-4 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    {{#footer}}
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; {{website_name}}</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    {{/footer}}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
