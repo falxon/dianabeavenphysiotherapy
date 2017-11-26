@@ -11,10 +11,11 @@
     <title>{{title}}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/small-business.css" rel="stylesheet">
+    <link href="/css/small-business.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
 
   </head>
 
@@ -23,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">{{site_name}}</a>
+        <a class="navbar-brand" href="/">{{site_name}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,13 +63,42 @@
       </div>
       {{/heading_row}}
       <!-- /.row -->
+      <!-- content -->
+      {{#content}}
+      <div class="row my-4">
+        <div class="col-lg-7">
+          <h1>{{bs}}</h1>
+          <p>{{bs_text}}</p>
+          {{#content1}}
+          <h2>{{bs_smaller}}</h2>
+          <p>{{bs_smaller_text}}</p>
+          {{/content1}}
+        </div>
+        <!-- /.col-md-4 -->
+
+        <!-- visualcontent -->
+        {{#visualcontent}}
+        <div class="col-lg-5">
+          <h2>{{title}}</h2>
+          {{{prettything}}}
+          <!-- Can be used to insert image or video. Video used iframe which is stupid. dimensions 400x260 -->
+          <p>{{text}}</p>
+        </div>
+        {{/visualcontent}}
+      <!-- /visualcontent -->
+      </div>
+
+      {{/content}}
+
+      <!-- /content -->
+      
 
       <!-- Content Row -->
       <div class="row">
         
         <!-- /.col-md-4 -->
         {{#card}}
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 centered">
           <div class="card h-100">
             <div class="card-body">
               <h2 class="card-title">{{card_title}}</h2>
