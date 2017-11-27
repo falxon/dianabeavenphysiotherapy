@@ -56,9 +56,22 @@ $about = array_merge($defaultpage, $about);
 $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
 $about["content"][0]["bs"] = "About Me";
-$about["content"][0]["bs_text"] = "Information about Diana Beaven";
-$about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated";
-$about["content"][0]["content1"][0]["bs_smaller_text"] = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.";
+$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may where appropraite use creative movement.";
+$about["content"][0]["bs_text"] = "[Information about qualifications]";
+$about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated include:";
+$about["content"][0]["content1"][0]["bs_smaller_text"] = "
+<ul>
+<li>Chronic Pain</li>
+<li>Chronic Fatigue</li>
+<li>Osteoarthritis</li>
+<li>Tension</li>
+<li>Physical and sexual abuse trauma</li>
+<li>Overbreathing and panic attacks</li>
+<li>Back Pain</li>
+<li>Fibromyalgia</li>
+<li>Hypermobility</li>
+</ul>
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.";
 $about["content"][0]["content1"][1]["bs_smaller"] = "Professional registration information";
 $about["content"][0]["content1"][1]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
 $about["content"][0]["visualcontent"][0]["title"] = "Image";
@@ -86,7 +99,7 @@ $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $physio["title"] = "Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
-$physio["content"][0]["bs"] = "Physio";
+$physio["content"][0]["bs"] = "Physiotherapy";
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
