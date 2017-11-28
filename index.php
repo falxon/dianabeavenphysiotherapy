@@ -121,7 +121,7 @@ $physio["card"][2]["card_title"] = "Contact us";
 $physio["card"][2]["card_text0"] = "You can contact us on:";
 $physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $physio["card"][2]["list"][1]["list_content"] = "07000 000001";
-$physio["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
+$physio["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
 $physio["card"][2]["card_text"] = "We are currently located in ". $location. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 
