@@ -157,10 +157,7 @@ $aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
 <h3>Other water-based therapies</h3>
 <p>I may include two other therapies conducted in quiet hydrotherapy pools, watsu and craniosacral therapy which use the lightness of the body in water to free spinal vertebra, and elongate muscles in ways not possible on land. Watsu is a method suited to people comfortable lying in water and being held by the therapist.</p>
 <p>The aquatic therapist moves a person gently and rhythmically through flowing patterns of  movement  which mobilise tight soft tissues, stretching, massaging and relieving pain. These rhythmic, dance-like movements of watsu are performed in harmony with the breath which can have a calming and unifying effect on the body and mind. A range of emotions can be released in this process of continuous flow. Experiencing watsu can leave people feeling freer, more flexible and calmer.</p>
-<p>During craniosacral therapy, there is a release of tight connective tissues (fascia) and a balancing of craniosacral rhythms. This may help in conditions which effect the spine, migraines, whip lash, birth and spinal cord injury, autism, sinus pain, sleep dysfunction and trauma to the head, chronic fatigue, fibromyalgia, ADHD and post traumatic stress disorder. These approaches can be combined together or incorporated into an aquatic session along side active exercise.
-</p>
-
-";
+<p>During craniosacral therapy, there is a release of tight connective tissues (fascia) and a balancing of craniosacral rhythms. This may help in conditions which effect the spine, migraines, whip lash, birth and spinal cord injury, autism, sinus pain, sleep dysfunction and trauma to the head, chronic fatigue, fibromyalgia, ADHD and post traumatic stress disorder. These approaches can be combined together or incorporated into an aquatic session along side active exercise.</p>";
 $aquatic["content"][0]["visualcontent"][0]["title"] = "Image";
 $aquatic["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
 $aquatic["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
@@ -186,6 +183,8 @@ $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $contact["title"] = "Contact";
 $contact = array_merge($defaultpage, $contact);
+$contact["card"][0]["card_title"] = "Contact Form";
+$contact["card"][0]["button"][0]["button_name"] = "Submit";
 
 
 
@@ -206,23 +205,28 @@ $currentpage = $_SERVER['REQUEST_URI'];
 
 if($currentpage=="/home" || $currentpage == "/"){
 	$bodyModel = $home;
+	$template = "home";
 } elseif ($currentpage=="/about"){
 	$bodyModel = $about;
+	$template = "home";
 } elseif ($currentpage=="/physio"){
 	$bodyModel = $physio;
+	$template = "home";
 } elseif ($currentpage=="/aquatic"){
 	$bodyModel = $aquatic;
+	$template = "home";
 } elseif ($currentpage=="/contact"){
 	$bodyModel = $contact;
+	$template = "form";
 } elseif (preg_match("/\/article\/.+/",$currentpage)){
 	$bodyModel = "sdklfjdkfjdlkfj";
 	echo("IT WORKS.");
 } else {
 	$bodyModel = $error;
+	$template = "home";
 }
 
 
-$template = "home";
 $page = $m->loadTemplate($template);
 echo $page->render($bodyModel);
 

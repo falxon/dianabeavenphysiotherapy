@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/small-business.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">{{site_name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {{#navbutton}}
+            <li class="nav-item {{is_active}}">
+              <a class="nav-link" href="{{url}}">{{title}}
+                <span class="sr-only">{{raisin}}</span>
+              </a>
+            </li>
+            {{/navbutton}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+    <p></p><p></p>
+
+        {{#card}}
+        <div class="col-md-8 mb-4 centered">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">{{card_title}}</h2>
+              <form action="form.php" method="post">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="email" class="form-control" id="name" placeholder="Frankie Ellis">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="frankieellis@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="10"></textarea>
+                </div>
+              
+            </div>
+            <div class="card-footer">
+              {{#button}}<button type="submit" class="btn btn-primary float-right">{{button_name}}</button>{{/button}}
+            </div>
+            </form>
+          </div>
+        </div>
+        {{/card}}
+        <!-- /.col-md-4 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    {{#footer}}
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; {{website_name}}</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    {{/footer}}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
