@@ -129,8 +129,31 @@ $aquatic["title"] = "Aquatic";
 $aquatic = array_merge($defaultpage, $aquatic);
 $aquatic["content"][0]["bs"] = "Aquatic Therapy";
 $aquatic["content"][0]["bs_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
-$aquatic["content"][0]["content1"][0]["bs_smaller"] = "Lorem ipsum";
-$aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequphysio";
+$aquatic["content"][0]["content1"][0]["bs_smaller"] = "Aquatic Therapy can be effective in treating:";
+$aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
+<li>Back pain</li>
+<li>Arthritis</li>
+<li>Joint stiffness</li>
+<li>Multiple joint problems</li>
+<li>Post-operative weakness</li>
+<li>Neurological weakness and muscle shortening</li>
+</ul>
+
+<h3>It carries several advantages over land based physiotherapy</h3>
+<ul>
+<li>Water provides a low-gravity, stress free environment in which to excercise. Treatment following fracture is hence started much earlier than on land.</li>
+<li>Water assists movement, so even the weakest of muscles can be encouraged to work.</li>
+<li>More than one joint can be treated at the same time which provides a comprehensive approach to arthritic and neurological management.</li>
+<li>Return to sport and work is accelerated as exercise tolerance and general fitness is integrated into treatment regimes.</li>
+<li>Balance re-education in the elderly is facilitated without fear of injury from falling.</li>
+</ul>
+<h3>Prevention and Maintenance</h3>
+<ul>
+<li>Conditions such as Osteoporosis benefit from hydrotherapy as an environment in which to exercise safely, strengthen bones and muscles hence reducing the likelihood of fractures.</li>
+<li>Exercise programmes are usually individualised to promote continued exercise after treatment has finished. This maximises the benefits gained from treatment. Groups including Ai Chi are available to facilitate this.</li>
+</ul>
+
+";
 $aquatic["content"][0]["visualcontent"][0]["title"] = "Image";
 $aquatic["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
 $aquatic["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
