@@ -152,6 +152,13 @@ $aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
 <li>Conditions such as Osteoporosis benefit from hydrotherapy as an environment in which to exercise safely, strengthen bones and muscles hence reducing the likelihood of fractures.</li>
 <li>Exercise programmes are usually individualised to promote continued exercise after treatment has finished. This maximises the benefits gained from treatment. Groups including Ai Chi are available to facilitate this.</li>
 </ul>
+<h3>Water Confidence</h3>
+<p>It is not necessary to be able to swim to gain the benefits of Hydrotherapy. The treatment is usually in a warm water pool (31-35 degrees). Access is by steps, or when available chair or bed hoist, allowing people with  all degrees of disability to enter/exit the pool. Sometimes exercises can be given in a cooler pool if a person can maintain their temperature through intermittent swimming and enter via the means available.</p>
+<h3>Other water-based therapies</h3>
+<p>I may include two other therapies conducted in quiet hydrotherapy pools, watsu and craniosacral therapy which use the lightness of the body in water to free spinal vertebra, and elongate muscles in ways not possible on land. Watsu is a method suited to people comfortable lying in water and being held by the therapist.</p>
+<p>The aquatic therapist moves a person gently and rhythmically through flowing patterns of  movement  which mobilise tight soft tissues, stretching, massaging and relieving pain. These rhythmic, dance-like movements of watsu are performed in harmony with the breath which can have a calming and unifying effect on the body and mind. A range of emotions can be released in this process of continuous flow. Experiencing watsu can leave people feeling freer, more flexible and calmer.</p>
+<p>During craniosacral therapy, there is a release of tight connective tissues (fascia) and a balancing of craniosacral rhythms. This may help in conditions which effect the spine, migraines, whip lash, birth and spinal cord injury, autism, sinus pain, sleep dysfunction and trauma to the head, chronic fatigue, fibromyalgia, ADHD and post traumatic stress disorder. These approaches can be combined together or incorporated into an aquatic session along side active exercise.
+</p>
 
 ";
 $aquatic["content"][0]["visualcontent"][0]["title"] = "Image";
