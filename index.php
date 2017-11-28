@@ -57,7 +57,7 @@ $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
 $about["content"][0]["bs"] = "About Me";
 $about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may where appropraite use creative movement.";
-$about["content"][0]["bs_text"] = "[Information about qualifications]";
+$about["content"][0]["bs_text2"] = "[Information about qualifications]";
 $about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated include:";
 $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <ul>
@@ -70,8 +70,7 @@ $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <li>Back Pain</li>
 <li>Fibromyalgia</li>
 <li>Hypermobility</li>
-</ul>
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.";
+</ul>";
 $about["content"][0]["content1"][1]["bs_smaller"] = "Professional registration information";
 $about["content"][0]["content1"][1]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
 $about["content"][0]["visualcontent"][0]["title"] = "Image";
@@ -100,6 +99,25 @@ $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 $physio["title"] = "Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
 $physio["content"][0]["bs"] = "Physiotherapy";
+$physio["card"][0]["card_title"] = "Treatment";
+$physio["card"][0]["card_text0"] = "Conditions treated include:";
+$physio["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
+$physio["card"][0]["list"][1]["list_content"] = "Fibromyalgia";
+$physio["card"][0]["list"][2]["list_content"] = "Overbreathing & panic attacks";
+$physio["card"][0]["list"][3]["list_content"] = "Osteoarthritis";
+$physio["card"][0]["list"][4]["list_content"] = "Tension";
+$physio["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
+$physio["card"][0]["list"][6]["list_content"] = "Hypermobility";
+$physio["card"][1]["card_title"] = "Chartered Physio";
+$physio["card"][1]["card_text"] = "Professional registration information";
+$physio["card"][1]["button"][0]["button_name"] = "About Me";
+$physio["card"][2]["card_title"] = "Contact us";
+$physio["card"][2]["card_text0"] = "You can contact us on:";
+$physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
+$physio["card"][2]["list"][1]["list_content"] = "07000 000001";
+$physio["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
+$physio["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
