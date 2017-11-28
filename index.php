@@ -42,7 +42,7 @@ $home["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $home["card"][1]["card_title"] = "Chartered Physio";
 $home["card"][1]["card_text"] = "Professional registration information";
 $home["card"][1]["button"][0]["button_name"] = "About Me";
-$home["card"][2]["card_title"] = "Contact us";
+$home["card"][2]["card_title"] = "Contact";
 $home["card"][2]["card_text0"] = "You can contact us on:";
 $home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $home["card"][2]["list"][1]["list_content"] = "07000 000001";
@@ -56,7 +56,7 @@ $about = array_merge($defaultpage, $about);
 $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
 $about["content"][0]["bs"] = "About Me";
-$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may where appropraite use creative movement.";
+$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may, where appropriate, use creative movement. I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
 $about["content"][0]["bs_text2"] = "[Information about qualifications]";
 $about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated include:";
 $about["content"][0]["content1"][0]["bs_smaller_text"] = "
@@ -92,13 +92,19 @@ $about["card"][2]["card_title"] = "Contact us";
 $about["card"][2]["card_text0"] = "You can contact us on:";
 $about["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $about["card"][2]["list"][1]["list_content"] = "07000 000001";
-$about["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
+$about["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
 $about["card"][2]["card_text"] = "We are currently located in ". $location. ".";
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $physio["title"] = "Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
 $physio["content"][0]["bs"] = "Physiotherapy";
+$physio["content"][0]["bs_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
+$physio["content"][0]["content1"][0]["bs_smaller"] = "Lorem ipsum";
+$physio["content"][0]["content1"][0]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequphysio";
+$physio["content"][0]["visualcontent"][0]["title"] = "Image";
+$physio["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
+$physio["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
 $physio["card"][0]["card_title"] = "Treatment";
 $physio["card"][0]["card_text0"] = "Conditions treated include:";
 $physio["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
@@ -118,6 +124,40 @@ $physio["card"][2]["list"][1]["list_content"] = "07000 000001";
 $physio["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
 $physio["card"][2]["card_text"] = "We are currently located in ". $location. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
+
+$aquatic["title"] = "Aquatic";
+$aquatic = array_merge($defaultpage, $aquatic);
+$aquatic["content"][0]["bs"] = "Aquatic Therapy";
+$aquatic["content"][0]["bs_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
+$aquatic["content"][0]["content1"][0]["bs_smaller"] = "Lorem ipsum";
+$aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequphysio";
+$aquatic["content"][0]["visualcontent"][0]["title"] = "Image";
+$aquatic["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
+$aquatic["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
+$aquatic["card"][0]["card_title"] = "Treatment";
+$aquatic["card"][0]["card_text0"] = "Conditions treated include:";
+$aquatic["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
+$aquatic["card"][0]["list"][1]["list_content"] = "Fibromyalgia";
+$aquatic["card"][0]["list"][2]["list_content"] = "Overbreathing & panic attacks";
+$aquatic["card"][0]["list"][3]["list_content"] = "Osteoarthritis";
+$aquatic["card"][0]["list"][4]["list_content"] = "Tension";
+$aquatic["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
+$aquatic["card"][0]["list"][6]["list_content"] = "Hypermobility";
+$aquatic["card"][1]["card_title"] = "Chartered Physio";
+$aquatic["card"][1]["card_text"] = "Professional registration information";
+$aquatic["card"][1]["button"][0]["button_name"] = "About Me";
+$aquatic["card"][2]["card_title"] = "Contact us";
+$aquatic["card"][2]["card_text0"] = "You can contact us on:";
+$aquatic["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
+$aquatic["card"][2]["list"][1]["list_content"] = "07000 000001";
+$aquatic["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
+$aquatic["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
+
+$contact["title"] = "Contact";
+$contact = array_merge($defaultpage, $contact);
+
+
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
@@ -140,6 +180,10 @@ if($currentpage=="/home" || $currentpage == "/"){
 	$bodyModel = $about;
 } elseif ($currentpage=="/physio"){
 	$bodyModel = $physio;
+} elseif ($currentpage=="/aquatic"){
+	$bodyModel = $aquatic;
+} elseif ($currentpage=="/contact"){
+	$bodyModel = $contact;
 } elseif (preg_match("/\/article\/.+/",$currentpage)){
 	$bodyModel = "sdklfjdkfjdlkfj";
 	echo("IT WORKS.");
