@@ -204,6 +204,16 @@ $currentpage = $_SERVER['REQUEST_URI'];
 
 
 if($currentpage=="/home" || $currentpage == "/"){
+	if(isset($_POST["name"])&& isset($_POST["email"])&& isset($_POST["message"])){
+		$to = "emberashdown@gmail.com";
+		$name = $_POST["name"];
+		$email = $_POST["email"];
+		$message = "Message from " .$email. "\n" .$_POST["message"];
+		$subject = "Message from " .$name;
+		mail($to, $subject, $message);
+		$home["email_sent"][0]["type"] = "alert";
+		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
+	}
 	$bodyModel = $home;
 	$template = "home";
 } elseif ($currentpage=="/about"){

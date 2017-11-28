@@ -43,8 +43,13 @@
     </nav>
 
     <!-- Page Content -->
+    {{#email_sent}}
     <div class="container">
-
+    <div class="alert alert-success" role="{{type}}">
+  {{message}}
+</div>
+    {{/email_sent}}
+<!-- Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly. -->
       <!-- Heading Row -->
       {{#heading_row}}
       <div class="row my-4">
