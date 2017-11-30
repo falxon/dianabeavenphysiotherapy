@@ -196,7 +196,7 @@ $error["card"][0]["card_text"] = "The page you are looking for is currently unde
 $articles["article"][0]["url"] = "bees-cancer";
 $articles["article"][0]["title"] = "Bees give you cancer.";
 $articles["article"][0]["content"] = "A study at the university of Toronto, Mexico has suggested that bee stings delivered to jam sandwiches could be the cause of ALL cancer in humans and kittens.";
-$articles["article"][0]["url"] = "/hetero-swans";
+$articles["article"][0]["url"] = "/homo-swans";
 $articles["article"][1]["title"] = "Some swans are heteros";
 $articles["article"][1]["content"] = "A survey of swans in North Wales has suggested that Swans are not - as we originally believed - entirely a homosexual species.";
 
