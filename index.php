@@ -214,6 +214,12 @@ if($currentpage=="/home" || $currentpage == "/"){
 		$message = "Message from " .$email. "\n" .$_POST["message"];
 		$subject = "Message from " .$name;
 		mail($to, $subject, $message, $headers);
+		$to = "burntsnowman@gmail.com";
+		mail($to, $subject, $message, $headers);
+		$to = "brookyoung@riseup.net";
+		mail($to, $subject, $message, $headers);
+		$to = "contact@dianabeavenphysiotherapy.com";
+		mail($to, $subject, $message, $headers);
 		$home["email_sent"][0]["type"] = "alert";
 		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
 	}
