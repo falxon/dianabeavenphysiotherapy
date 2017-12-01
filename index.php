@@ -213,7 +213,7 @@ if($currentpage=="/home" || $currentpage == "/"){
     		"Reply-To:".$_POST["email"];
 		$message = "Message from " .$email. "\n" .$_POST["message"];
 		$subject = "Message from " .$name;
-		mail($to, $subject, $message);
+		mail($to, $subject, $message, $headers);
 		$home["email_sent"][0]["type"] = "alert";
 		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
 	}
