@@ -209,6 +209,8 @@ if($currentpage=="/home" || $currentpage == "/"){
 		$to = "emberashdown@gmail.com";
 		$name = $_POST["name"];
 		$email = $_POST["email"];
+		$headers = 'From: contact@dianabeavenphysiotherapy.com' . "\r\n" .
+    		"Reply-To:".$_POST["email"];
 		$message = "Message from " .$email. "\n" .$_POST["message"];
 		$subject = "Message from " .$name;
 		mail($to, $subject, $message);
