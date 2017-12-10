@@ -2,9 +2,21 @@
 require "vendor/autoload.php";
 require "vendor/redbean/rb.php";
 require "secure.php";
+# Database
 R::setup( 'mysql:host=localhost;dbname=mydatabase',
         '$database_username', '$database_password' );
 
+$dynamicsitecontent = R::dispense("dynamicsitecontent");
+
+$dynamicsitecontent["location"] = "Crowborough";
+$dynamicsitecontent["phonenumber"] = "07000 000000";
+$dynamicsitecontent["address1"] = "00 hghghghg st";
+$dynamicsitecontent["address2"] = "ddhajbbh";
+$dynamicsitecontent["address_city"] = "city";
+$dynamicsitecontent["address_postcode"] = "AA00 0AA";
+
+
+# Mustache
 $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')
 ));
