@@ -1,5 +1,9 @@
 <?php
 require "vendor/autoload.php";
+require "vendor/redbean/rb.php";
+require "secure.php";
+R::setup( 'mysql:host=localhost;dbname=mydatabase',
+        '$database_username', '$database_password' );
 
 $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')
