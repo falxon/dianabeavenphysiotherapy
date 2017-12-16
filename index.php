@@ -3,17 +3,27 @@ require "vendor/autoload.php";
 require "vendor/redbean/rb.php";
 require "secure.php";
 # Database
-R::setup( 'mysql:host=localhost;dbname=mydatabase',
-        '$database_username', '$database_password' );
+R::setup('mysql:host=localhost;dbname=physio',
+        'root', 'root');
 
 $dynamicsitecontent = R::dispense("dynamicsitecontent");
 
-$dynamicsitecontent["location"] = "Crowborough";
+$dynamicsitecontent["location"] = "Portsmouth";
 $dynamicsitecontent["phonenumber"] = "07000 000000";
 $dynamicsitecontent["address1"] = "00 hghghghg st";
 $dynamicsitecontent["address2"] = "ddhajbbh";
 $dynamicsitecontent["address_city"] = "city";
-$dynamicsitecontent["address_postcode"] = "AA00 0AA";
+$dynamicsitecontent["address_postcode"] = "AA00 0AB";
+
+$id = R::store($dynamicsitecontent);
+
+
+
+$return = R::load("dynamicsitecontent", $id);
+echo($return["location"]);
+
+
+
 
 
 # Mustache
