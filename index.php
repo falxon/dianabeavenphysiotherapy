@@ -249,6 +249,10 @@ if($currentpage=="/home" || $currentpage == "/"){
 	$bodyModel = "sdklfjdkfjdlkfj";
 	echo("IT WORKS.");
 } elseif ($currentpage=="/login"){
+  if(isset($_POST["password"])){
+    $login = R::load("login", 1);
+    password_verify ("", $login["phash"]);
+  }
   $bodyModel = $login;
   $template = "login";
 } elseif ($currentpage=="/control"){
