@@ -214,9 +214,18 @@ $logging["content"][0]["bs_text"] = "You are being logged on";
 
 $control["title"] = "Control Panel";
 $control = array_merge($defaultinternalpage, $control);
-$control["content"][0]["bs"] = "What would you like to do now?";
+$control["content"][0]["bs"] = "Welcome to the Control Panel";
 $control["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information <a href='/control/details'>here</a>";
 $control["content"][0]["content1"][0]["bs_smaller_text"] = "Or, you can add articles to the articles section <a href='/control/articles'>here</a>";
+
+$details["title"] = "Edit Details";
+$details = array_merge($defaultinternalpage, $details);
+$details["content"][0]["bs"] = "Details";
+$details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit.";
+$details["card"][0]["card_title"] = "Please enter changes:";
+$details["button"][0]["button_name"] = "Submit";
+
+
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
@@ -275,13 +284,9 @@ if($currentpage=="/home" || $currentpage == "/"){
     $login = R::load("login", 1);
     if(password_verify ($_POST["password"], $login["phash"])){
       session_start(['cookie_lifetime' => 3600]);
-      /*$sesid = R::dispense("sesid");
-      $sesid["id"] = $_COOKIE["PHPSESSID"];
-      R::store($sesid);*/
       header("Location: /logging");
     } else {
       header("Location: /login");
-      echo "Wrong password :p";
     }
   }
   $bodyModel = $login;
@@ -296,10 +301,19 @@ if($currentpage=="/home" || $currentpage == "/"){
 } elseif ($currentpage=="/control"){
   $user = R::load("user", 1);
   if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
-    echo ("es werkt!!!");
-    echo $_COOKIE["PHPSESSID"];
     $bodyModel = $control;
     $template = "control";
+  } else {
+    echo "You are not logged in.";
+    $bodyModel = $login;
+    $template = "login";
+  }
+} elseif ($currentpage=="/control/details"){
+  $user = R::load("user", 1);
+  if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
+    $bodyModel = $details;
+    $template = "control";
+    $dynamicsitecontent = R::load("dynamicsitecontent", 7);
   } else {
     echo "You are not logged in.";
     $bodyModel = $login;

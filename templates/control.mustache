@@ -46,8 +46,8 @@
     <div class="container">
     <p></p><p></p>
     {{#content}}
-    <div class="row my-4">
-      <div class="col-lg-7">
+    <div class="row my-6">
+      <div class="col-md-8 mb-6 centered">
         <h1>{{bs}}</h1>
         <p>{{{bs_text}}}</p>
         <p>{{bs_text2}}</p>
@@ -60,24 +60,39 @@
 
     {{/content}}
         {{#card}}
-        <div class="col-md-8 mb-4 centered">
+        <div class="col-md-8 mb-6 centered">
           <div class="card h-100">
             <div class="card-body">
               <h2 class="card-title">{{card_title}}</h2>
-              <form action="/home" method="post">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Frankie Ellis" required="true">
+              <form action="/control/details" method="post">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" name="location" id="location" placeholder="Olympus Mons, Mars">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="07678 972345">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="frankieellis@example.com" required="true">
+                  <label for="address1">Address Line 1</label>
+                  <input type="text" class="form-control" name="address1" id="address1" placeholder="12A Glenwood Close">
                 </div>
                 <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" name="message" id="message" rows="10" required="true"></textarea>
+                  <label for="address2">Address Line 2</label>
+                  <input type="text" class="form-control" name="address2" id="address2" placeholder="Hayling Island">
                 </div>
-
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="address_city">City</label>
+                    <input type="text" class="form-control" name="address_city" id="address_city" placeholder="Atlantis">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="address_postcode">Postcode</label>
+                    <input type="text" class="form-control" name="address_postcode" id="address_postcode" placeholder="GA35 3YS">
+                  </div>
+                </div>
             </div>
             <div class="card-footer">
               {{#button}}<button type="submit" class="btn btn-primary float-right">{{button_name}}</button>{{/button}}
