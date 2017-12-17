@@ -208,6 +208,10 @@ $login["card"][0]["card_title"] = "Login";
 $login["card"][0]["card_subtitle"] = "Enter your password to log in to the admin area of the site";
 $login["card"][0]["button"][0]["button_name"] = "Submit";
 
+$logging["title"] = "Logging on";
+$logging = array_merge($defaultpage, $logging);
+$logging["content"][0]["bs_text"] = "You are being logged on";
+
 $control["title"] = "Control Panel";
 $control = array_merge($defaultinternalpage, $control);
 $control["content"][0]["bs"] = "What would you like to do now?";
@@ -274,7 +278,7 @@ if($currentpage=="/home" || $currentpage == "/"){
       /*$sesid = R::dispense("sesid");
       $sesid["id"] = $_COOKIE["PHPSESSID"];
       R::store($sesid);*/
-      header("Location: /control");
+      header("Location: /logging");
     } else {
       header("Location: /login");
       echo "Wrong password :p";
@@ -282,6 +286,13 @@ if($currentpage=="/home" || $currentpage == "/"){
   }
   $bodyModel = $login;
   $template = "login";
+} elseif ($currentpage=="/logging"){
+	$bodyModel = $logging;
+	$template = "home";
+  $user = R::load("user", 1);
+  $user["sessionid"] = $_COOKIE["PHPSESSID"];
+  R::store($user);
+  header("Location: control");
 } elseif ($currentpage=="/control"){
   if($_COOKIE["PHPSESSID"]){
     echo ("es werkt!!!");
