@@ -4,32 +4,11 @@ require "vendor/redbean/rb.php";
 require "secure.php";
 # Database
 R::setup('mysql:host=localhost;dbname=physio',
-        'root', 'root');
-
-$dynamicsitecontent = R::dispense("dynamicsitecontent");
-
-$dynamicsitecontent["location"] = "Portsmouth";
-$dynamicsitecontent["phonenumber"] = "07000 000000";
-$dynamicsitecontent["address1"] = "00 hghghghg st";
-$dynamicsitecontent["address2"] = "ddhajbbh";
-$dynamicsitecontent["address_city"] = "city";
-$dynamicsitecontent["address_postcode"] = "AA00 0AB";
-
-$id = R::store($dynamicsitecontent);
-
-
-
-$return = R::load("dynamicsitecontent", $id);
-echo($return["location"]);
-
-
-
-
+        'user', 'user');
 
 # Mustache
 $m = new Mustache_Engine(array(
-'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')
-));
+'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')));
 
 
 $location="Crowborough";
@@ -212,7 +191,10 @@ $contact = array_merge($defaultpage, $contact);
 $contact["card"][0]["card_title"] = "Contact Form";
 $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
-
+$login["title"] = "Login";
+$login = array_merge($defaultpage, $login);
+$login["card"][0]["card_title"] = "Please enter your password to login";
+$login["card"][0]["button"][0]["button_name"] = "Submit";
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
@@ -266,6 +248,12 @@ if($currentpage=="/home" || $currentpage == "/"){
 } elseif (preg_match("/\/article\/.+/",$currentpage)){
 	$bodyModel = "sdklfjdkfjdlkfj";
 	echo("IT WORKS.");
+} elseif ($currentpage=="/login"){
+  $bodyModel = $login;
+  $template = "login";
+} elseif ($currentpage=="/control"){
+  $bodyModel = $control;
+  $template = "control";
 } else {
 	$bodyModel = $error;
 	$template = "home";
@@ -274,4 +262,3 @@ if($currentpage=="/home" || $currentpage == "/"){
 
 $page = $m->loadTemplate($template);
 echo $page->render($bodyModel);
-
