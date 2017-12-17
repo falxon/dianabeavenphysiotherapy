@@ -43,6 +43,14 @@
     </nav>
 
     <!-- Page Content -->
+    {{#database_updated}}
+    <div class="alert alert-success" role="{{type}}">
+  {{message}}
+  </div>
+
+    {{/database_updated}}
+
+
     <div class="container">
     <p></p><p></p>
     {{#content}}

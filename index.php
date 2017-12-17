@@ -311,9 +311,7 @@ if($currentpage=="/home" || $currentpage == "/"){
 } elseif ($currentpage=="/control/details"){
   $user = R::load("user", 1);
   if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
-    $bodyModel = $details;
-    $template = "control";
-    if(isset($_POST)){
+    if(isset($_POST["location"])|| isset($_POST["phonenumber"])){
       $dynamicsitecontent = R::load("dynamicsitecontent", 7);
       $dynamicsitecontent["location"] = $_POST["location"];
       $dynamicsitecontent["phonenumber"] = $_POST["phonenumber"];
@@ -322,6 +320,14 @@ if($currentpage=="/home" || $currentpage == "/"){
       $dynamicsitecontent["address_city"] = $_POST["address_city"];
       $dynamicsitecontent["address_postcode"] = $_POST["address_postcode"];
       R::store($dynamicsitecontent);
+      $details["database_updated"][0]["type"] = "alert";
+  		$details["database_updated"][0]["message"] = "The database has been updated.";
+      $bodyModel = $details;
+      $template = "control";
+    }
+    else {
+      $bodyModel = $details;
+      $template = "control";
 
     }
   } else {
