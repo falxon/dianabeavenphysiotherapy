@@ -294,7 +294,8 @@ if($currentpage=="/home" || $currentpage == "/"){
   R::store($user);
   header("Location: control");
 } elseif ($currentpage=="/control"){
-  if($_COOKIE["PHPSESSID"]){
+  $user = R::load("user", 1);
+  if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
     echo ("es werkt!!!");
     echo $_COOKIE["PHPSESSID"];
     $bodyModel = $control;
