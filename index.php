@@ -313,7 +313,17 @@ if($currentpage=="/home" || $currentpage == "/"){
   if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
     $bodyModel = $details;
     $template = "control";
-    $dynamicsitecontent = R::load("dynamicsitecontent", 7);
+    if(isset($_POST)){
+      $dynamicsitecontent = R::load("dynamicsitecontent", 7);
+      $dynamicsitecontent["location"] = $_POST["location"];
+      $dynamicsitecontent["phonenumber"] = $_POST["phonenumber"];
+      $dynamicsitecontent["address1"] = $_POST["address1"];
+      $dynamicsitecontent["address2"] = $_POST["address2"];
+      $dynamicsitecontent["address_city"] = $_POST["address_city"];
+      $dynamicsitecontent["address_postcode"] = $_POST["address_postcode"];
+      R::store($dynamicsitecontent);
+
+    }
   } else {
     echo "You are not logged in.";
     $bodyModel = $login;
