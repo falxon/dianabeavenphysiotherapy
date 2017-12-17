@@ -7,13 +7,14 @@ $user_id = "dianabeaven";
 # Database
 R::setup('mysql:host=localhost;dbname=physio',
         'user', 'user');
+$dynamicsitecontent = R::load("dynamicsitecontent", 7);
 
 # Mustache
 $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')));
 
 
-$location="Crowborough";
+#$location="Crowborough";
 
 $defaultpage["site_name"] = "Diana Beaven Physiotherapy - BETA";
 $defaultpage["navbutton"][0]["title"] = "Home";
@@ -61,9 +62,9 @@ $home["card"][1]["button"][0]["button_name"] = "About Me";
 $home["card"][2]["card_title"] = "Contact";
 $home["card"][2]["card_text0"] = "You can contact us on:";
 $home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
-$home["card"][2]["list"][1]["list_content"] = "07000 000001";
+$home["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $home["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$home["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$home["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $home["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 
@@ -107,9 +108,9 @@ $about["card"][1]["button"][0]["button_name"] = "About Me";
 $about["card"][2]["card_title"] = "Contact us";
 $about["card"][2]["card_text0"] = "You can contact us on:";
 $about["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
-$about["card"][2]["list"][1]["list_content"] = "07000 000001";
+$about["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $about["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$about["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$about["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $physio["title"] = "Physiotherapy";
@@ -136,9 +137,9 @@ $physio["card"][1]["button"][0]["button_name"] = "About Me";
 $physio["card"][2]["card_title"] = "Contact us";
 $physio["card"][2]["card_text0"] = "You can contact us on:";
 $physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
-$physio["card"][2]["list"][1]["list_content"] = "07000 000001";
+$physio["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $physio["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$physio["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$physio["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $aquatic["title"] = "Aquatic";
@@ -192,13 +193,15 @@ $aquatic["card"][1]["button"][0]["button_name"] = "About Me";
 $aquatic["card"][2]["card_title"] = "Contact us";
 $aquatic["card"][2]["card_text0"] = "You can contact us on:";
 $aquatic["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
-$aquatic["card"][2]["list"][1]["list_content"] = "07000 000001";
+$aquatic["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $aquatic["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$aquatic["card"][2]["card_text"] = "We are currently located in ". $location. ".";
+$aquatic["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 
 $contact["title"] = "Contact";
 $contact = array_merge($defaultpage, $contact);
+$contact["content"][0]["bs"] = "Contact Me";
+$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work from ". $dynamicsitecontent["location"]. ". Find me at:\n". $dynamicsitecontent["address1"]. "\n ". $dynamicsitecontent["address2"];
 $contact["card"][0]["card_title"] = "Contact Form";
 $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
