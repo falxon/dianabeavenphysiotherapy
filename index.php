@@ -193,7 +193,8 @@ $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
 $login["title"] = "Login";
 $login = array_merge($defaultpage, $login);
-$login["card"][0]["card_title"] = "Please enter your password to login";
+$login["card"][0]["card_title"] = "Login";
+$login["card"][0]["card_subtitle"] = "Enter your password to log in to the admin area of the site";
 $login["card"][0]["button"][0]["button_name"] = "Submit";
 
 $error["title"] = "Error";
