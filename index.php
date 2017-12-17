@@ -30,6 +30,15 @@ $defaultpage["navbutton"][5]["title"] = "Articles";
 $defaultpage["navbutton"][5]["url"] = "/articles";
 $defaultpage["footer"][0]["website_name"] = "Diana Beaven Physiotherapy";
 
+$defaultinternalpage["site_name"] = "Diana Beaven Physiotherapy";
+$defaultinternalpage["navbutton"][0]["title"] = "Home";
+$defaultinternalpage["navbutton"][0]["url"] = "/home";
+$defaultinternalpage["navbutton"][1]["title"] = "Details";
+$defaultinternalpage["navbutton"][1]["url"] = "/control/details";
+$defaultinternalpage["navbutton"][2]["title"] = "Articles";
+$defaultinternalpage["navbutton"][2]["url"] = "/control/articles";
+$defaultinternalpage["footer"][0]["website_name"] = "Diana Beaven Physiotherapy";
+
 
 
 $home["title"] = "Home";
@@ -200,7 +209,10 @@ $login["card"][0]["card_subtitle"] = "Enter your password to log in to the admin
 $login["card"][0]["button"][0]["button_name"] = "Submit";
 
 $control["title"] = "Control Panel";
-$control = array_merge($defaultpage, $control);
+$control = array_merge($defaultinternalpage, $control);
+$control["content"][0]["bs"] = "What would you like to do now?";
+$control["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information <a href='/control/details'>here</a>";
+$control["content"][0]["content1"][0]["bs_smaller_text"] = "Or, you can add articles to the articles section <a href='/control/articles'>here</a>";
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
@@ -259,11 +271,9 @@ if($currentpage=="/home" || $currentpage == "/"){
     $login = R::load("login", 1);
     if(password_verify ($_POST["password"], $login["phash"])){
       session_start(['cookie_lifetime' => 3600]);
-      $sesid = R::dispense("sesid");
-      $sesid["id"] = 997;
-      R::store($sesid);
-      #session_id();
-      #$_SESSION["user"] = $user_id;
+      /*$sesid = R::dispense("sesid");
+      $sesid["id"] = $_COOKIE["PHPSESSID"];
+      R::store($sesid);*/
       header("Location: /control");
     } else {
       header("Location: /login");
@@ -276,11 +286,13 @@ if($currentpage=="/home" || $currentpage == "/"){
   if($_COOKIE["PHPSESSID"]){
     echo ("es werkt!!!");
     echo $_COOKIE["PHPSESSID"];
+    $bodyModel = $control;
+    $template = "control";
   } else {
     echo "You are not logged in.";
+    $bodyModel = $login;
+    $template = "login";
   }
-  $bodyModel = $control;
-  $template = "control";
 } else {
 	$bodyModel = $error;
 	$template = "home";

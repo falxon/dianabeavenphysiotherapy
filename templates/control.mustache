@@ -45,7 +45,20 @@
     <!-- Page Content -->
     <div class="container">
     <p></p><p></p>
+    {{#content}}
+    <div class="row my-4">
+      <div class="col-lg-7">
+        <h1>{{bs}}</h1>
+        <p>{{{bs_text}}}</p>
+        <p>{{bs_text2}}</p>
+        {{#content1}}
+        <h2>{{bs_smaller}}</h2>
+        <p>{{{bs_smaller_text}}}</p>
+        {{/content1}}
+      </div>
+    </div>
 
+    {{/content}}
         {{#card}}
         <div class="col-md-8 mb-4 centered">
           <div class="card h-100">
@@ -64,7 +77,7 @@
                   <label for="message">Message</label>
                   <textarea class="form-control" name="message" id="message" rows="10" required="true"></textarea>
                 </div>
-              
+
             </div>
             <div class="card-footer">
               {{#button}}<button type="submit" class="btn btn-primary float-right">{{button_name}}</button>{{/button}}
