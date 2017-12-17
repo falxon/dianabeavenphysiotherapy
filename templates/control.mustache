@@ -47,16 +47,24 @@
     <p></p><p></p>
 
         {{#card}}
-        <div class="col-md-5 mb-4 centered">
+        <div class="col-md-8 mb-4 centered">
           <div class="card h-100">
             <div class="card-body">
               <h2 class="card-title">{{card_title}}</h2>
-              <p> {{card_subtitle}} </p>
-              <form action="/login" method="post">
+              <form action="/home" method="post">
                 <div class="form-group">
-                  <label for="name">Password</label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="type password here" required="true">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Frankie Ellis" required="true">
                 </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="frankieellis@example.com" required="true">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" name="message" id="message" rows="10" required="true"></textarea>
+                </div>
+              
             </div>
             <div class="card-footer">
               {{#button}}<button type="submit" class="btn btn-primary float-right">{{button_name}}</button>{{/button}}

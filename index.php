@@ -2,6 +2,8 @@
 require "vendor/autoload.php";
 require "vendor/redbean/rb.php";
 require "secure.php";
+# Login
+$user_id = "dianabeaven";
 # Database
 R::setup('mysql:host=localhost;dbname=physio',
         'user', 'user');
@@ -193,10 +195,12 @@ $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
 $login["title"] = "Login";
 $login = array_merge($defaultpage, $login);
-$login["card"][0]["card_title"] = "Please enter your password to login";
 $login["card"][0]["card_title"] = "Login";
 $login["card"][0]["card_subtitle"] = "Enter your password to log in to the admin area of the site";
 $login["card"][0]["button"][0]["button_name"] = "Submit";
+
+$control["title"] = "Control Panel";
+$control = array_merge($defaultpage, $control);
 
 $error["title"] = "Error";
 $error = array_merge($defaultpage, $error);
@@ -253,11 +257,28 @@ if($currentpage=="/home" || $currentpage == "/"){
 } elseif ($currentpage=="/login"){
   if(isset($_POST["password"])){
     $login = R::load("login", 1);
-    password_verify ("", $login["phash"]);
+    if(password_verify ($_POST["password"], $login["phash"])){
+      session_start(['cookie_lifetime' => 3600]);
+      $sesid = R::dispense("sesid");
+      $sesid["id"] = 997;
+      R::store($sesid);
+      #session_id();
+      #$_SESSION["user"] = $user_id;
+      header("Location: /control");
+    } else {
+      header("Location: /login");
+      echo "Wrong password :p";
+    }
   }
   $bodyModel = $login;
   $template = "login";
 } elseif ($currentpage=="/control"){
+  if($_COOKIE["PHPSESSID"]){
+    echo ("es werkt!!!");
+    echo $_COOKIE["PHPSESSID"];
+  } else {
+    echo "You are not logged in.";
+  }
   $bodyModel = $control;
   $template = "control";
 } else {
