@@ -13,6 +13,24 @@ $dynamicsitecontent = R::load("dynamicsitecontent", 7);
 $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')));
 
+# MARKDOWN
+use Michelf\Markdown;
+## example usage
+/*$my_md =
+"# What is life
+- I
+- Don't
+- Even
+
+## Losing Ability to Can
+1. I can.
+2. You can.
+3. Actually, no, we can't even.
+
+See more at [this website.](http://cheese.com)";
+
+$my_html = Markdown::defaultTransform($my_md);
+*/
 
 #$location="Crowborough";
 
@@ -73,8 +91,8 @@ $about = array_merge($defaultpage, $about);
 $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
 $about["content"][0]["bs"] = "About Me";
-$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may, where appropriate, use creative movement. I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
-$about["content"][0]["bs_text2"] = "[Information about qualifications]";
+$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
+$about["content"][0]["bs_text2"] = "After gaining my physiotherapy qualifications at Addenbrookes Hospital, Cambridge, my first job was in Cape Town where patients often walked barefoot to Groote Schuur hospital. Although most of my practice has been in England, I have also worked in Spain. With 30 years experience across different fields, and a specialism in mental health and more recently aquatic therapy, I am at my best working with the body and mind together.";
 $about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated include:";
 $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <ul>
@@ -88,11 +106,10 @@ $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <li>Fibromyalgia</li>
 <li>Hypermobility</li>
 </ul>";
-$about["content"][0]["content1"][1]["bs_smaller"] = "Professional registration information";
-$about["content"][0]["content1"][1]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
-$about["content"][0]["visualcontent"][0]["title"] = "Image";
-$about["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
-$about["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
+$about["content"][0]["content1"][1]["bs_smaller_text"] = "
+You do not need a referral by a doctor to receive treatment. However, if you are seeking reimbursement from private health insurance companies you need to check if your insurer needs a GP/consultant referral. I maintain a close relationship with my patient's doctors — both GPs and consultants — and unless requested not to, will write to them outlining the condition, progress etc.";
+$about["content"][0]["content1"][2]["bs_smaller"] = "Professional registration information";
+$about["content"][0]["content1"][2]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
 $about["card"][0]["card_title"] = "Treatment";
 $about["card"][0]["card_text0"] = "Conditions treated include:";
 $about["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
@@ -116,12 +133,7 @@ $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 $physio["title"] = "Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
 $physio["content"][0]["bs"] = "Physiotherapy";
-$physio["content"][0]["bs_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
-$physio["content"][0]["content1"][0]["bs_smaller"] = "Lorem ipsum";
-$physio["content"][0]["content1"][0]["bs_smaller_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequphysio";
-$physio["content"][0]["visualcontent"][0]["title"] = "Image";
-$physio["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
-$physio["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
+$physio["content"][0]["bs_text"] = "I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may, where appropriate, use creative movement.";
 $physio["card"][0]["card_title"] = "Treatment";
 $physio["card"][0]["card_text0"] = "Conditions treated include:";
 $physio["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
@@ -145,7 +157,7 @@ $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 $aquatic["title"] = "Aquatic";
 $aquatic = array_merge($defaultpage, $aquatic);
 $aquatic["content"][0]["bs"] = "Aquatic Therapy";
-$aquatic["content"][0]["bs_text"] = "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?";
+$aquatic["content"][0]["bs_text"] = "I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
 $aquatic["content"][0]["content1"][0]["bs_smaller"] = "Aquatic Therapy can be effective in treating:";
 $aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
 <li>Back pain</li>
@@ -175,9 +187,8 @@ $aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
 <p>I may include two other therapies conducted in quiet hydrotherapy pools, watsu and craniosacral therapy which use the lightness of the body in water to free spinal vertebra, and elongate muscles in ways not possible on land. Watsu is a method suited to people comfortable lying in water and being held by the therapist.</p>
 <p>The aquatic therapist moves a person gently and rhythmically through flowing patterns of  movement  which mobilise tight soft tissues, stretching, massaging and relieving pain. These rhythmic, dance-like movements of watsu are performed in harmony with the breath which can have a calming and unifying effect on the body and mind. A range of emotions can be released in this process of continuous flow. Experiencing watsu can leave people feeling freer, more flexible and calmer.</p>
 <p>During craniosacral therapy, there is a release of tight connective tissues (fascia) and a balancing of craniosacral rhythms. This may help in conditions which effect the spine, migraines, whip lash, birth and spinal cord injury, autism, sinus pain, sleep dysfunction and trauma to the head, chronic fatigue, fibromyalgia, ADHD and post traumatic stress disorder. These approaches can be combined together or incorporated into an aquatic session along side active exercise.</p>";
-$aquatic["content"][0]["visualcontent"][0]["title"] = "Image";
-$aquatic["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/sTSA_sWGM44" frameborder="0" allowfullscreen></iframe>';
-$aquatic["content"][0]["visualcontent"][0]["text"] = "Lorem ipsum...";
+$aquatic["content"][0]["visualcontent"][0]["title"] = "Watsu in Video";
+$aquatic["content"][0]["visualcontent"][0]["prettything"] = '<iframe width="400" height="260" src="https://www.youtube.com/embed/NQ_M1ZWopTA" frameborder="0" allowfullscreen></iframe>';
 $aquatic["card"][0]["card_title"] = "Treatment";
 $aquatic["card"][0]["card_text0"] = "Conditions treated include:";
 $aquatic["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
@@ -224,7 +235,7 @@ $control["content"][0]["content1"][0]["bs_smaller_text"] = "Or, you can add arti
 $details["title"] = "Edit Details";
 $details = array_merge($defaultinternalpage, $details);
 $details["content"][0]["bs"] = "Details";
-$details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit.";
+$details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit. Click <a target='_blank' href='/contact'>here</a> to see the original.";
 $details["card"][0]["card_title"] = "Please enter changes:";
 $details["button"][0]["button_name"] = "Submit";
 
@@ -242,9 +253,12 @@ $articles["article"][0]["url"] = "/homo-swans";
 $articles["article"][1]["title"] = "Some swans are bi actually";
 $articles["article"][1]["content"] = "A survey of swans in North Wales has suggested that Swans are not - as we originally believed - entirely a monosexual species.";
 
+$articles["title"] = "[placeholder it for now]";
+$articles = array_merge($defaultinternalpage, $articles);
+$articles["markdown_article"] = $my_html = Markdown::defaultTransform($my_md);;
+
 
 $currentpage = $_SERVER['REQUEST_URI'];
-
 
 if($currentpage=="/home" || $currentpage == "/"){
 	if(isset($_POST["name"])&& isset($_POST["email"])&& isset($_POST["message"])){
@@ -280,7 +294,7 @@ if($currentpage=="/home" || $currentpage == "/"){
 	$bodyModel = $contact;
 	$template = "form";
 } elseif (preg_match("/\/article\/.+/",$currentpage)){
-	$bodyModel = "sdklfjdkfjdlkfj";
+	$bodyModel = $articles;
 	echo("IT WORKS.");
 } elseif ($currentpage=="/login"){
   if(isset($_POST["password"])){
@@ -313,25 +327,25 @@ if($currentpage=="/home" || $currentpage == "/"){
   }
 } elseif ($currentpage=="/control/details"){
   $user = R::load("user", 1);
-  if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
-    if(isset($_POST["location"])|| isset($_POST["phonenumber"])){
-      $dynamicsitecontent = R::load("dynamicsitecontent", 7);
-      $dynamicsitecontent["location"] = $_POST["location"];
-      $dynamicsitecontent["phonenumber"] = $_POST["phonenumber"];
-      $dynamicsitecontent["address1"] = $_POST["address1"];
-      $dynamicsitecontent["address2"] = $_POST["address2"];
-      $dynamicsitecontent["address_city"] = $_POST["address_city"];
-      $dynamicsitecontent["address_postcode"] = $_POST["address_postcode"];
-      R::store($dynamicsitecontent);
-      $details["database_updated"][0]["type"] = "alert";
-  		$details["database_updated"][0]["message"] = "The database has been updated.";
-      $bodyModel = $details;
-      $template = "control";
-    }
-    else {
-      $bodyModel = $details;
-      $template = "control";
-
+  if(isset($_COOKIE["PHPSESSID"])){
+    if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
+      if(isset($_POST["location"])|| isset($_POST["phonenumber"])){
+        $dynamicsitecontent = R::load("dynamicsitecontent", 7);
+        $dynamicsitecontent["location"] = $_POST["location"];
+        $dynamicsitecontent["phonenumber"] = $_POST["phonenumber"];
+        $dynamicsitecontent["address1"] = $_POST["address1"];
+        $dynamicsitecontent["address2"] = $_POST["address2"];
+        $dynamicsitecontent["address_city"] = $_POST["address_city"];
+        $dynamicsitecontent["address_postcode"] = $_POST["address_postcode"];
+        R::store($dynamicsitecontent);
+        $details["database_updated"][0]["type"] = "alert";
+    		$details["database_updated"][0]["message"] = "The database has been updated.";
+        $bodyModel = $details;
+        $template = "control";
+      } else {
+        $bodyModel = $details;
+        $template = "control";
+      }
     }
   } else {
     echo "You are not logged in.";

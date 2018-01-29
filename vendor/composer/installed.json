@@ -14,7 +14,7 @@
             "reference": "e5534d4ab8e80c159553d507e358ed20a806d3bf",
             "shasum": ""
         },
-        "time": "2017-03-21 07:01:49",
+        "time": "2017-03-21T07:01:49+00:00",
         "type": "component",
         "extra": {
             "component": {
@@ -44,59 +44,6 @@
         "homepage": "http://jquery.com"
     },
     {
-        "name": "twbs/bootstrap",
-        "version": "v3.3.7",
-        "version_normalized": "3.3.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/twbs/bootstrap.git",
-            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
-            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86",
-            "shasum": ""
-        },
-        "replace": {
-            "twitter/bootstrap": "self.version"
-        },
-        "time": "2016-07-25 15:51:55",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.3.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jacob Thornton",
-                "email": "jacobthornton@gmail.com"
-            },
-            {
-                "name": "Mark Otto",
-                "email": "markdotto@gmail.com"
-            }
-        ],
-        "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-        "homepage": "http://getbootstrap.com",
-        "keywords": [
-            "JS",
-            "css",
-            "framework",
-            "front-end",
-            "less",
-            "mobile-first",
-            "responsive",
-            "web"
-        ]
-    },
-    {
         "name": "mustache/mustache",
         "version": "v2.12.0",
         "version_normalized": "2.12.0.0",
@@ -118,7 +65,7 @@
             "friendsofphp/php-cs-fixer": "~1.11",
             "phpunit/phpunit": "~3.7|~4.0|~5.0"
         },
-        "time": "2017-07-11 12:54:05",
+        "time": "2017-07-11T12:54:05+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -142,6 +89,54 @@
         "keywords": [
             "mustache",
             "templating"
+        ]
+    },
+    {
+        "name": "michelf/php-markdown",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/michelf/php-markdown.git",
+            "reference": "01ab082b355bf188d907b9929cd99b2923053495"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/michelf/php-markdown/zipball/01ab082b355bf188d907b9929cd99b2923053495",
+            "reference": "01ab082b355bf188d907b9929cd99b2923053495",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2018-01-15T00:49:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Michelf\\": "Michelf/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Michel Fortin",
+                "email": "michel.fortin@michelf.ca",
+                "homepage": "https://michelf.ca/",
+                "role": "Developer"
+            },
+            {
+                "name": "John Gruber",
+                "homepage": "https://daringfireball.net/"
+            }
+        ],
+        "description": "PHP Markdown",
+        "homepage": "https://michelf.ca/projects/php-markdown/",
+        "keywords": [
+            "markdown"
         ]
     }
 ]

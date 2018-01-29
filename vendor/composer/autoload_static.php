@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitf56b4a5a503fba07cf929580b0383acf
 {
+    public static $prefixLengthsPsr4 = array (
+        'M' => 
+        array (
+            'Michelf\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Michelf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/michelf/php-markdown/Michelf',
+        ),
+    );
+
     public static $prefixesPsr0 = array (
         'M' => 
         array (
@@ -19,6 +33,8 @@ class ComposerStaticInitf56b4a5a503fba07cf929580b0383acf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf56b4a5a503fba07cf929580b0383acf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf56b4a5a503fba07cf929580b0383acf::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitf56b4a5a503fba07cf929580b0383acf::$prefixesPsr0;
 
         }, null, ClassLoader::class);
