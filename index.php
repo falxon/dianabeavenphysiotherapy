@@ -13,26 +13,6 @@ $dynamicsitecontent = R::load("dynamicsitecontent", 7);
 $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')));
 
-# MARKDOWN
-use Michelf\Markdown;
-## example usage
-/*$my_md =
-"# What is life
-- I
-- Don't
-- Even
-
-## Losing Ability to Can
-1. I can.
-2. You can.
-3. Actually, no, we can't even.
-
-See more at [this website.](http://cheese.com)";
-
-$my_html = Markdown::defaultTransform($my_md);
-*/
-
-#$location="Crowborough";
 
 $defaultpage["site_name"] = "Diana Beaven Physiotherapy - BETA";
 $defaultpage["navbutton"][0]["title"] = "Home";
@@ -246,16 +226,7 @@ $error = array_merge($defaultpage, $error);
 $error["card"][0]["card_title"] = "404 Error";
 $error["card"][0]["card_text"] = "The page you are looking for is currently undergoing treatment and will recover shortly. Please use the menu to find what you are looking for.";
 
-$articles["article"][0]["url"] = "bees-cancer";
-$articles["article"][0]["title"] = "Bees give you cancer.";
-$articles["article"][0]["content"] = "A study at the university of Toronto, Mexico has suggested that bee stings delivered to jam sandwiches could be the cause of ALL cancer in humans and kittens.";
-$articles["article"][0]["url"] = "/homo-swans";
-$articles["article"][1]["title"] = "Some swans are bi actually";
-$articles["article"][1]["content"] = "A survey of swans in North Wales has suggested that Swans are not - as we originally believed - entirely a monosexual species.";
 
-$articles["title"] = "[placeholder it for now]";
-$articles = array_merge($defaultinternalpage, $articles);
-$articles["markdown_article"] = $my_html = Markdown::defaultTransform($my_md);;
 
 
 $currentpage = $_SERVER['REQUEST_URI'];
