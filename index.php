@@ -5,7 +5,7 @@ require "secure.php";
 # Login
 $user_id = "dianabeaven";
 # Database
-R::setup('mysql:host=localhost;dbname=physio',
+R::setup('mysql:host=databoose.db;dbname=physio',
         $database_username, $database_password);
 $dynamicsitecontent = R::load("dynamicsitecontent", 7);
 

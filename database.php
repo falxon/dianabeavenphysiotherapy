@@ -3,7 +3,7 @@ require "vendor/redbean/rb.php";
 require "secure.php";
 
 # Database
-R::setup('mysql:host=%;dbname=physio',
+R::setup('mysql:host=databoose.db;dbname=physio',
         $database_username, $database_password);
 
 
