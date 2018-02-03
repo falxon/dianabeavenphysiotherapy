@@ -7,7 +7,7 @@ $user_id = "dianabeaven";
 # Database
 R::setup('mysql:host=databoose.db;dbname=physio',
         $database_username, $database_password);
-$dynamicsitecontent = R::load("dynamicsitecontent", 7);
+$dynamicsitecontent = R::load("dynamicsitecontent", 1);
 
 # Mustache
 $m = new Mustache_Engine(array(
