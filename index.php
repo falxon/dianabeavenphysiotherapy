@@ -6,7 +6,7 @@ require "secure.php";
 $user_id = "dianabeaven";
 # Database
 R::setup('mysql:host=localhost;dbname=physio',
-        'user', 'user');
+        $database_username, $database_password);
 $dynamicsitecontent = R::load("dynamicsitecontent", 7);
 
 # Mustache
