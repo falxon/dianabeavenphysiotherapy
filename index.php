@@ -61,7 +61,7 @@ $home["card"][2]["card_text0"] = "You can contact us on:";
 $home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $home["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $home["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$home["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
+$home["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
 $home["card"][2]["button"][0]["button_name"] = "Contact Form";
 $home["card"][2]["button"][0]["url"] = "/contact";
 
@@ -108,7 +108,7 @@ $about["card"][2]["card_text0"] = "You can contact us on:";
 $about["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $about["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $about["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$about["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
+$about["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 $about["card"][2]["button"][0]["url"] = "/contact";
 
@@ -134,7 +134,7 @@ $physio["card"][2]["card_text0"] = "You can contact us on:";
 $physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $physio["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $physio["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$physio["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
+$physio["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 $physio["card"][2]["button"][0]["url"] = "/contact";
 
@@ -191,14 +191,14 @@ $aquatic["card"][2]["card_text0"] = "You can contact us on:";
 $aquatic["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $aquatic["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $aquatic["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$aquatic["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
+$aquatic["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
 $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 $aquatic["card"][2]["button"][0]["url"] = "/contact";
 
 $contact["title"] = "Contact";
 $contact = array_merge($defaultpage, $contact);
 $contact["content"][0]["bs"] = "Contact Me";
-$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work from ". $dynamicsitecontent["location"]. ". Find me at:<br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
+$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work ". $dynamicsitecontent["location"]. ". Find me at:<br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
 $contact["card"][0]["card_title"] = "Contact Form";
 $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
