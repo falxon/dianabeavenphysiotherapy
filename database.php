@@ -4,9 +4,9 @@ require "secure.php";
 
 # Database
 R::setup('mysql:host=localhost;dbname=physio',
-        'user', 'user');
+        $database_username, $database_password);
 
-/*
+
 $dynamicsitecontent = R::dispense("dynamicsitecontent");
 $dynamicsitecontent["location"] = "Crowbar";
 $dynamicsitecontent["phonenumber"] = "07000 000000";
@@ -23,6 +23,6 @@ $login["phash"] = "$2y$10$3svhflKo4Sm8a5aEpQ3spe9EUiJTKRvPuMhJJjVEESqpRVs9k2fO6"
 $loginid = R::store($login);
 
 
-*/
+
 $login = R::load("login", 1);
 echo password_verify ("", $login["phash"]);
