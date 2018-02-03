@@ -55,6 +55,7 @@ $home["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $home["card"][1]["card_title"] = "Chartered Physio";
 $home["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $home["card"][1]["button"][0]["button_name"] = "About Me";
+$home["card"][1]["button"][0]["url"] = "/about";
 $home["card"][2]["card_title"] = "Contact";
 $home["card"][2]["card_text0"] = "You can contact us on:";
 $home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
@@ -62,6 +63,7 @@ $home["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"]
 $home["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
 $home["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $home["card"][2]["button"][0]["button_name"] = "Contact Form";
+$home["card"][2]["button"][0]["url"] = "/contact";
 
 
 $about["title"] = "About Me";
@@ -100,6 +102,7 @@ $about["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $about["card"][1]["card_title"] = "Chartered Physio";
 $about["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $about["card"][1]["button"][0]["button_name"] = "About Me";
+$about["card"][1]["button"][0]["url"] = "/about";
 $about["card"][2]["card_title"] = "Contact us";
 $about["card"][2]["card_text0"] = "You can contact us on:";
 $about["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
@@ -107,6 +110,7 @@ $about["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"
 $about["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
 $about["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
+$about["card"][2]["button"][0]["url"] = "/contact";
 
 $physio["title"] = "Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
@@ -124,6 +128,7 @@ $physio["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $physio["card"][1]["card_title"] = "Chartered Physio";
 $physio["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $physio["card"][1]["button"][0]["button_name"] = "About Me";
+$physio["card"][1]["button"][0]["url"] = "/about";
 $physio["card"][2]["card_title"] = "Contact us";
 $physio["card"][2]["card_text0"] = "You can contact us on:";
 $physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
@@ -131,6 +136,7 @@ $physio["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber
 $physio["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
 $physio["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
+$physio["card"][2]["button"][0]["url"] = "/contact";
 
 $aquatic["title"] = "Aquatic";
 $aquatic = array_merge($defaultpage, $aquatic);
@@ -179,6 +185,7 @@ $aquatic["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $aquatic["card"][1]["card_title"] = "Chartered Physio";
 $aquatic["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $aquatic["card"][1]["button"][0]["button_name"] = "About Me";
+$aquatic["card"][1]["button"][0]["url"] = "/about";
 $aquatic["card"][2]["card_title"] = "Contact us";
 $aquatic["card"][2]["card_text0"] = "You can contact us on:";
 $aquatic["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
@@ -186,6 +193,7 @@ $aquatic["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumbe
 $aquatic["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
 $aquatic["card"][2]["card_text"] = "We are currently located in ". $dynamicsitecontent["location"]. ".";
 $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
+$aquatic["card"][2]["button"][0]["url"] = "/contact";
 
 $contact["title"] = "Contact";
 $contact = array_merge($defaultpage, $contact);
