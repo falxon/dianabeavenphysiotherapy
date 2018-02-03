@@ -45,7 +45,7 @@
     <!-- Page Content -->
     {{#database_updated}}
     <div class="alert alert-success" role="{{type}}">
-  {{message}}
+  {{{message}}}
   </div>
 
     {{/database_updated}}
@@ -76,29 +76,29 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="location">Location</label>
-                    <input type="text" class="form-control" name="location" id="location" placeholder="Olympus Mons, Mars" required="true">
+                    <input value="{{location}}"type="text" class="form-control" name="location" id="location" placeholder="Olympus Mons, Mars" required="true">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="phonenumber">Phone Number</label>
-                    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="55555 555555" required="true">
+                    <input value="{{phonenumber}}"type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="55555 555555" required="true">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="address1">Address Line 1</label>
-                  <input type="text" class="form-control" name="address1" id="address1" placeholder="121B Baker St" required="true">
+                  <input value="{{address1}}" type="text" class="form-control" name="address1" id="address1" placeholder="121B Baker St" required="true">
                 </div>
                 <div class="form-group">
                   <label for="address2">Address Line 2</label>
-                  <input type="text" class="form-control" name="address2" id="address2" placeholder="Treasure Island" required="true">
+                  <input value="{{address2}}" type="text" class="form-control" name="address2" id="address2" placeholder="Treasure Island" required="true">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="address_city">City</label>
-                    <input type="text" class="form-control" name="address_city" id="address_city" placeholder="Atlantis" required="true">
+                    <input value="{{address_city}}" type="text" class="form-control" name="address_city" id="address_city" placeholder="Atlantis" required="true">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="address_postcode">Postcode</label>
-                    <input type="text" class="form-control" name="address_postcode" id="address_postcode" placeholder="GA35 3YS" required="true">
+                    <input value="{{address_postcode}}"type="text" class="form-control" name="address_postcode" id="address_postcode" placeholder="GA35 3YS" required="true">
                   </div>
                 </div>
             </div>

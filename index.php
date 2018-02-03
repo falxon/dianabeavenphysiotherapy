@@ -190,7 +190,7 @@ $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 $contact["title"] = "Contact";
 $contact = array_merge($defaultpage, $contact);
 $contact["content"][0]["bs"] = "Contact Me";
-$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work from ". $dynamicsitecontent["location"]. ". Find me at:\n". $dynamicsitecontent["address1"]. "\n ". $dynamicsitecontent["address2"];
+$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work from ". $dynamicsitecontent["location"]. ". Find me at:<br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
 $contact["card"][0]["card_title"] = "Contact Form";
 $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
@@ -215,6 +215,12 @@ $details = array_merge($defaultinternalpage, $details);
 $details["content"][0]["bs"] = "Details";
 $details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit. Click <a target='_blank' href='/contact'>here</a> to see the original.";
 $details["card"][0]["card_title"] = "Please enter changes:";
+$details["card"][0]['location'] = $dynamicsitecontent["location"];
+$details["card"][0]['phonenumber'] = $dynamicsitecontent["phonenumber"];
+$details["card"][0]['address1'] = $dynamicsitecontent["address1"];
+$details["card"][0]['address2'] = $dynamicsitecontent["address2"];
+$details["card"][0]['address_city'] = $dynamicsitecontent["address_city"];
+$details["card"][0]['address_postcode'] = $dynamicsitecontent["address_postcode"];
 $details["button"][0]["button_name"] = "Submit";
 
 
@@ -298,17 +304,25 @@ if($currentpage=="/home" || $currentpage == "/"){
   $user = R::load("user", 1);
   if(isset($_COOKIE["PHPSESSID"])){
     if($_COOKIE["PHPSESSID"]==$user["sessionid"]){
-      if(isset($_POST["location"])|| isset($_POST["phonenumber"])){
-        $dynamicsitecontent = R::load("dynamicsitecontent", 7);
+      if(isset($_POST["location"]) || isset($_POST["phonenumber"]) || isset($_POST["address1"]) || isset($_POST["address2"]) || isset($_POST["address2"]) || isset($_POST["address_city"]) || isset($_POST["address_postcode"])){
+        $dynamicsitecontent = R::load("dynamicsitecontent", 1);
         $dynamicsitecontent["location"] = $_POST["location"];
         $dynamicsitecontent["phonenumber"] = $_POST["phonenumber"];
         $dynamicsitecontent["address1"] = $_POST["address1"];
         $dynamicsitecontent["address2"] = $_POST["address2"];
         $dynamicsitecontent["address_city"] = $_POST["address_city"];
         $dynamicsitecontent["address_postcode"] = $_POST["address_postcode"];
+        $details["card"][0]["card_title"] = "Please enter changes:";
+        $details["card"][0]['location'] = $dynamicsitecontent["location"];
+        $details["card"][0]['phonenumber'] = $dynamicsitecontent["phonenumber"];
+        $details["card"][0]['address1'] = $dynamicsitecontent["address1"];
+        $details["card"][0]['address2'] = $dynamicsitecontent["address2"];
+        $details["card"][0]['address_city'] = $dynamicsitecontent["address_city"];
+        $details["card"][0]['address_postcode'] = $dynamicsitecontent["address_postcode"];
+
         R::store($dynamicsitecontent);
         $details["database_updated"][0]["type"] = "alert";
-    		$details["database_updated"][0]["message"] = "The database has been updated.";
+    		$details["database_updated"][0]["message"] = "The database has been updated. Click <a href='/control'>here</a> to return to the control page";
         $bodyModel = $details;
         $template = "control";
       } else {
