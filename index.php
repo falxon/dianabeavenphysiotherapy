@@ -253,8 +253,7 @@ if($currentpage=="/home" || $currentpage == "/"){
         "\r\nContent-Type: text/html; charset=UTF-8\r\n";
 		$message = "Message from " .$email. "\n" .$_POST["message"];
 		$subject = "Message from " .$name;
-		//if(mail($to, $subject, $message, $headers)){
-    if($floop == false){
+		if(mail($to, $subject, $message, $headers)){
   		$home["email_sent"][0]["type"] = "success";
   		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
     }else{
