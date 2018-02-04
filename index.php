@@ -250,11 +250,16 @@ if($currentpage=="/home" || $currentpage == "/"){
 		$email = $_POST["email"];
 		$headers = 'From: contact@dianabeavenphysiotherapy.com' . "\r\n" .
     		"Reply-To:".$_POST["email"];
+        "\r\nContent-Type: text/html; charset=UTF-8\r\n";
 		$message = "Message from " .$email. "\n" .$_POST["message"];
 		$subject = "Message from " .$name;
-		mail($to, $subject, $message, $headers);
-		$home["email_sent"][0]["type"] = "alert";
-		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
+		if(mail($to, $subject, $message, $headers)){
+  		$home["email_sent"][0]["type"] = "alert";
+  		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
+    }else{
+      $home["email_sent"][0]["type"] = "warning";
+  		$home["email_sent"][0]["message"] = "Unfortunately, your message has not been sent due to an error. Apologies for any inconvenience caused - we are working on this issue and hope to resolve it shortly.";
+    }
 	}
 	$bodyModel = $home;
 	$template = "home";
