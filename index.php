@@ -242,13 +242,14 @@ $error["card"][0]["card_text"] = "The page you are looking for is currently unde
 
 
 $currentpage = $_SERVER['REQUEST_URI'];
-
+$floop = true;
 if($currentpage=="/home" || $currentpage == "/"){
-	if(isset($_POST["name"])&& isset($_POST["email"])&& isset($_POST["message"])){
-		$to = "contact@dianableavenphysiotherapy.com";
+	//if(isset($_POST["name"])&& isset($_POST["email"])&& isset($_POST["message"])){
+    if($floop == false){
+    $to = "contact@dianabeavenphysiotherapy.com";
 		$name = $_POST["name"];
 		$email = $_POST["email"];
-		$headers = 'From: contact@dianableavenphysiotherapy.com' . "\r\n" .
+		$headers = 'From: contact@dianabeavenphysiotherapy.com' . "\r\n" .
     		"Reply-To:".$_POST["email"];
         "\r\nContent-Type: text/html; charset=UTF-8\r\n";
 		$message = "Message from " .$email. "\n" .$_POST["message"];
