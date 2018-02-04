@@ -258,7 +258,7 @@ if($currentpage=="/home" || $currentpage == "/"){
   		$home["email_sent"][0]["type"] = "alert";
   		$home["email_sent"][0]["message"] = "Your message has been sent. Diana Beaven Physiotherapist will get back to you shortly.";
     }else{
-      $home["email_sent"][0]["type"] = "warning";
+      $home["email_sent"][0]["type"] = "secondary";
   		$home["email_sent"][0]["message"] = "Unfortunately, your message has not been sent due to an error. Apologies for any inconvenience caused - we are working on this issue and hope to resolve it shortly.";
     }
 	}
