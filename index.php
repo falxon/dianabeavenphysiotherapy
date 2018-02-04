@@ -245,7 +245,7 @@ $currentpage = $_SERVER['REQUEST_URI'];
 
 if($currentpage=="/home" || $currentpage == "/"){
 	if(isset($_POST["name"])&& isset($_POST["email"])&& isset($_POST["message"])){
-		$to = "contact@dianabeavenphysiotherapy.com";
+		$to = "contact@dianableavenphysiotherapy.com";
 		$name = $_POST["name"];
 		$email = $_POST["email"];
 		$headers = 'From: contact@dianableavenphysiotherapy.com' . "\r\n" .
