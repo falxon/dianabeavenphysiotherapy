@@ -248,7 +248,7 @@ if($currentpage=="/home" || $currentpage == "/"){
 		$to = "contact@dianabeavenphysiotherapy.com";
 		$name = $_POST["name"];
 		$email = $_POST["email"];
-		$headers = 'From: contact@dianabeavenphysiotherapy.com' . "\r\n" .
+		$headers = 'From: contact@dianableavenphysiotherapy.com' . "\r\n" .
     		"Reply-To:".$_POST["email"];
         "\r\nContent-Type: text/html; charset=UTF-8\r\n";
 		$message = "Message from " .$email. "\n" .$_POST["message"];
