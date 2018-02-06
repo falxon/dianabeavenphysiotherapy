@@ -53,15 +53,15 @@ $home["card"][0]["list"][4]["list_content"] = "Tension";
 $home["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
 $home["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $home["card"][1]["card_title"] = "Chartered Physio";
-$home["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
+$home["card"][1]["card_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $home["card"][1]["button"][0]["button_name"] = "About Me";
 $home["card"][1]["button"][0]["url"] = "/about";
 $home["card"][2]["card_title"] = "Contact";
-$home["card"][2]["card_text0"] = "You can contact us on:";
+$home["card"][2]["card_text0"] = "You can contact me on:";
 $home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $home["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
-$home["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$home["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
+$home["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
+$home["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent["location"]. ".";
 $home["card"][2]["button"][0]["button_name"] = "Contact Form";
 $home["card"][2]["button"][0]["url"] = "/contact";
 
@@ -71,13 +71,14 @@ $about = array_merge($defaultpage, $about);
 $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
 $about["content"][0]["bs"] = "About Me";
-$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
+$about["content"][0]["bs_text"] = "I enjoy working with people with long term health conditions which in addition to the physical challenges can be accompanied by low mood and a sense of hopelessness. Pain may increase fear and tension. I have qualifications in Hydrotherapy and experience treating a wide range of conditions in the water.";
 $about["content"][0]["bs_text2"] = "After gaining my physiotherapy qualifications at Addenbrookes Hospital, Cambridge, my first job was in Cape Town where patients often walked barefoot to Groote Schuur hospital. Although most of my practice has been in England, I have also worked in Spain. With 30 years experience across different fields, and a specialism in mental health and more recently aquatic therapy, I am at my best working with the body and mind together.";
 $about["content"][0]["content1"][0]["bs_smaller"] = "Conditions Treated include:";
 $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <ul>
 <li>Chronic Pain</li>
 <li>Chronic Fatigue</li>
+<li>Rehabilitation following joint replacement, fracture and falls</li>
 <li>Osteoarthritis</li>
 <li>Tension</li>
 <li>Physical and sexual abuse trauma</li>
@@ -87,9 +88,9 @@ $about["content"][0]["content1"][0]["bs_smaller_text"] = "
 <li>Hypermobility</li>
 </ul>";
 $about["content"][0]["content1"][1]["bs_smaller_text"] = "
-You do not need a referral by a doctor to receive treatment. However, if you are seeking reimbursement from private health insurance companies you need to check if your insurer needs a GP/consultant referral. I maintain a close relationship with my patient's doctors — both GPs and consultants — and unless requested not to, will write to them outlining the condition, progress etc.";
+You do not need a referral by a doctor to receive treatment. However, if you are seeking reimbursement from private health insurance companies you need to check if your insurer needs a GP/consultant referral.";
 $about["content"][0]["content1"][2]["bs_smaller"] = "Professional registration information";
-$about["content"][0]["content1"][2]["bs_smaller_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
+$about["content"][0]["content1"][2]["bs_smaller_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $about["card"][0]["card_title"] = "Treatment";
 $about["card"][0]["card_text0"] = "Conditions treated include:";
 $about["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
@@ -100,15 +101,15 @@ $about["card"][0]["list"][4]["list_content"] = "Tension";
 $about["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
 $about["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $about["card"][1]["card_title"] = "Chartered Physio";
-$about["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
+$about["card"][1]["card_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $about["card"][1]["button"][0]["button_name"] = "About Me";
 $about["card"][1]["button"][0]["url"] = "/about";
-$about["card"][2]["card_title"] = "Contact us";
-$about["card"][2]["card_text0"] = "You can contact us on:";
+$about["card"][2]["card_title"] = "Contact me";
+$about["card"][2]["card_text0"] = "You can contact me on:";
 $about["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $about["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $about["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$about["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
+$about["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent["location"]. ".";
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 $about["card"][2]["button"][0]["url"] = "/contact";
 
@@ -126,22 +127,22 @@ $physio["card"][0]["list"][4]["list_content"] = "Tension";
 $physio["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
 $physio["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $physio["card"][1]["card_title"] = "Chartered Physio";
-$physio["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
+$physio["card"][1]["card_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $physio["card"][1]["button"][0]["button_name"] = "About Me";
 $physio["card"][1]["button"][0]["url"] = "/about";
-$physio["card"][2]["card_title"] = "Contact us";
-$physio["card"][2]["card_text0"] = "You can contact us on:";
+$physio["card"][2]["card_title"] = "Contact me";
+$physio["card"][2]["card_text0"] = "You can contact me on:";
 $physio["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $physio["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $physio["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
-$physio["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
+$physio["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent["location"]. ".";
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 $physio["card"][2]["button"][0]["url"] = "/contact";
 
 $aquatic["title"] = "Aquatic";
 $aquatic = array_merge($defaultpage, $aquatic);
 $aquatic["content"][0]["bs"] = "Aquatic Therapy";
-$aquatic["content"][0]["bs_text"] = "I have qualifications in Aquatic Therapy and experience treating a wide range of conditions in the water.";
+$aquatic["content"][0]["bs_text"] = "I have qualifications in hydrotherapy and experience treating a wide range of conditions in the water.";
 $aquatic["content"][0]["content1"][0]["bs_smaller"] = "Aquatic Therapy can be effective in treating:";
 $aquatic["content"][0]["content1"][0]["bs_smaller_text"] = "<ul>
 <li>Back pain</li>
@@ -183,15 +184,15 @@ $aquatic["card"][0]["list"][4]["list_content"] = "Tension";
 $aquatic["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
 $aquatic["card"][0]["list"][6]["list_content"] = "Hypermobility";
 $aquatic["card"][1]["card_title"] = "Chartered Physio";
-$aquatic["card"][1]["card_text"] = "Diana Beaven is a licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
+$aquatic["card"][1]["card_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $aquatic["card"][1]["button"][0]["button_name"] = "About Me";
 $aquatic["card"][1]["button"][0]["url"] = "/about";
-$aquatic["card"][2]["card_title"] = "Contact us";
-$aquatic["card"][2]["card_text0"] = "You can contact us on:";
+$aquatic["card"][2]["card_title"] = "Contact Me";
+$aquatic["card"][2]["card_text0"] = "You can contact me on:";
 $aquatic["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
 $aquatic["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
-$aquatic["card"][2]["list"][2]["list_content"] = "Or contact us through the form on this site.";
-$aquatic["card"][2]["card_text"] = "We are currently located ". $dynamicsitecontent["location"]. ".";
+$aquatic["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
+$aquatic["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent["location"]. ".";
 $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 $aquatic["card"][2]["button"][0]["url"] = "/contact";
 
