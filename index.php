@@ -14,7 +14,7 @@ $m = new Mustache_Engine(array(
 'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/templates')));
 
 
-$defaultpage["site_name"] = "Diana Beaven Physiotherapy";
+$defaultpage["site_name"] = "Diana Beaven Physiotherapy and Hydrotherapy";
 $defaultpage["navbutton"][0]["title"] = "Home";
 $defaultpage["navbutton"][0]["url"] = "/home";
 $defaultpage["navbutton"][1]["title"] = "About Me";
@@ -48,10 +48,11 @@ $home["card"][0]["card_text0"] = "Conditions treated include:";
 $home["card"][0]["list"][0]["list_content"] = "Chronic pain & fatigue";
 $home["card"][0]["list"][1]["list_content"] = "Fibromyalgia";
 $home["card"][0]["list"][2]["list_content"] = "Overbreathing & panic attacks";
-$home["card"][0]["list"][3]["list_content"] = "Osteoarthritis";
-$home["card"][0]["list"][4]["list_content"] = "Tension";
-$home["card"][0]["list"][5]["list_content"] = "Trauma from abuse";
-$home["card"][0]["list"][6]["list_content"] = "Hypermobility";
+$home["card"][0]["list"][3]["list_content"] = "Rehabilitation after injury or joint replacement";
+$home["card"][0]["list"][4]["list_content"] = "Osteoarthritis";
+$home["card"][0]["list"][5]["list_content"] = "Tension";
+$home["card"][0]["list"][6]["list_content"] = "Trauma from abuse";
+$home["card"][0]["list"][7]["list_content"] = "Hypermobility";
 $home["card"][1]["card_title"] = "Chartered Physio";
 $home["card"][1]["card_text"] = "Diana Beaven is licensed to practice physiotherapy by the Chartered Society of Physiotherapists (registration number 039058) and by the The Council for Professions Supplementary to Medicine (registration number PH27644).";
 $home["card"][1]["button"][0]["button_name"] = "About Me";
