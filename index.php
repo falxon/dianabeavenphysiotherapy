@@ -296,7 +296,7 @@ if($currentpage=="/home" || $currentpage == "/"){
 	$template = "home";
   $user = R::load("user", 1);
   $user["sessionid"] = $_COOKIE["PHPSESSID"];
-  R::store($user, 1);
+  R::store($user);
   header("Location: control");
 } elseif ($currentpage=="/control"){
   $user = R::load("user", 1);
