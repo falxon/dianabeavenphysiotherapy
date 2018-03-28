@@ -26,6 +26,8 @@ $defaultpage["navbutton"][3]["url"] = "/aquatic";
 $defaultpage["navbutton"][4]["title"] = "Contact";
 $defaultpage["navbutton"][4]["url"] = "/contact";
 $defaultpage["footer"][0]["website_name"] = "Diana Beaven Physiotherapy";
+$defaultpage["footer"][0]["credit"][0]["webdever"] = "Entropy Innovations";
+$defaultpage["footer"][0]["footer_size"] = "4";
 
 $defaultinternalpage["site_name"] = "Diana Beaven Physiotherapy";
 $defaultinternalpage["navbutton"][0]["title"] = "Home";
@@ -35,10 +37,12 @@ $defaultinternalpage["navbutton"][1]["url"] = "/control/details";
 $defaultinternalpage["navbutton"][2]["title"] = "Articles";
 $defaultinternalpage["navbutton"][2]["url"] = "/control/articles";
 $defaultinternalpage["footer"][0]["website_name"] = "Diana Beaven Physiotherapy";
+$defaultinternalpage["footer"][0]["credit"][0]["webdever"] = "Entropy Innovations";
+$defaultinternalpage["footer"][0]["footer_size"] = "4";
 
 
 
-$home["title"] = "Home";
+$home["title"] = "Diana Beaven Physiotherapy";
 $home = array_merge($defaultpage, $home);
 $home["navbutton"][0]["is_active"] = "active";
 $home["navbutton"][0]["raisin"] = "(current)";
@@ -67,7 +71,7 @@ $home["card"][2]["button"][0]["button_name"] = "Contact Form";
 $home["card"][2]["button"][0]["url"] = "/contact";
 
 
-$about["title"] = "About Me";
+$about["title"] = "Diana Beaven Physiotherapy - About Me";
 $about = array_merge($defaultpage, $about);
 $about["navbutton"][1]["is_active"] = "active";
 $about["navbutton"][1]["raisin"] = "(current)";
@@ -114,7 +118,7 @@ $about["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent[
 $about["card"][2]["button"][0]["button_name"] = "Contact Form";
 $about["card"][2]["button"][0]["url"] = "/contact";
 
-$physio["title"] = "Physiotherapy";
+$physio["title"] = "Diana Beaven Physiotherapy - Physiotherapy";
 $physio = array_merge($defaultpage, $physio);
 $physio["content"][0]["bs"] = "Physiotherapy";
 $physio["content"][0]["bs_text"] = "I am able to help people by working with the body and mind together and working in partnership with them to help develop skills to manage their condition better. I incorporate approaches from the Alexander technique to influence postural habits, biomechanics and movement patterns. I have a diploma in dance and movement therapy so may, where appropriate, use creative movement.";
@@ -140,7 +144,7 @@ $physio["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent
 $physio["card"][2]["button"][0]["button_name"] = "Contact Form";
 $physio["card"][2]["button"][0]["url"] = "/contact";
 
-$aquatic["title"] = "Aquatic";
+$aquatic["title"] = "Diana Beaven Physiotherapy - Aquatic";
 $aquatic = array_merge($defaultpage, $aquatic);
 $aquatic["content"][0]["bs"] = "Aquatic Therapy";
 $aquatic["content"][0]["bs_text"] = "I have qualifications in hydrotherapy and experience treating a wide range of conditions in the water.";
@@ -197,7 +201,7 @@ $aquatic["card"][2]["card_text"] = "I am currently located ". $dynamicsiteconten
 $aquatic["card"][2]["button"][0]["button_name"] = "Contact Form";
 $aquatic["card"][2]["button"][0]["url"] = "/contact";
 
-$contact["title"] = "Contact";
+$contact["title"] = "Diana Beaven Physiotherapy - Contact";
 $contact = array_merge($defaultpage, $contact);
 $contact["content"][0]["bs"] = "Contact Me";
 $contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work ". $dynamicsitecontent["location"]. ". Find me at:<br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
@@ -235,7 +239,7 @@ $details["button"][0]["button_name"] = "Submit";
 
 
 
-$error["title"] = "Error";
+$error["title"] = "Diana Beaven Physiotherapy - Error";
 $error = array_merge($defaultpage, $error);
 $error["card"][0]["card_title"] = "404 Error";
 $error["card"][0]["card_text"] = "The page you are looking for is currently undergoing treatment and will recover shortly. Please use the menu to find what you are looking for.";

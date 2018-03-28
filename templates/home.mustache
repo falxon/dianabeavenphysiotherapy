@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Diana Beaven Physiotherapy offers private physiotherapy and hydrotherapy sessions in the UK. A range of conditions are treated including pain, trauma and arthritis.">
     <meta name="author" content="">
 
     <title>{{title}}</title>
@@ -134,9 +134,12 @@
 
     <!-- Footer -->
     {{#footer}}
-    <footer class="py-5 bg-dark">
+    <footer class="py-{{footer_size}} bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; {{website_name}}</p>
+        {{#credit}}
+        <p class="m-0 text-center text-white links-white">Site developed by <a href="http://www.entropyinnovations.com">{{webdever}}</a></p>
+        {{/credit}}
       </div>
       <!-- /.container -->
     </footer>
