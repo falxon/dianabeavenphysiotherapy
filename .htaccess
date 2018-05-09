@@ -1,5 +1,5 @@
 RewriteEngine On
 RewriteRule ^[\w\-\/]+$ index.php
 
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+RewriteCond %{HTTP_HOST} dianabeavenphysiotherapy.com$
+RewriteRule ^(.*)$ https://dianabeavenphysiotherapy.com$1 [L,NC,R=301]
