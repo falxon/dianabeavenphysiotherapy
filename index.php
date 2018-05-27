@@ -228,7 +228,7 @@ $control["content"][0]["content1"][0]["bs_smaller_text"] = "Or, you can add arti
 $details["title"] = "Edit Details";
 $details = array_merge($defaultinternalpage, $details);
 $details["content"][0]["bs"] = "Details";
-$details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit. Click <a target='_blank' href='/contact'>here</a> to see the original.";
+$details["content"][0]["bs_text"] = "You can edit your location, address, phone number and other contact information using the forms below, and then clicking submit. Click <a target='_blank' href='/contact'>here</a> to see the original. <br/> Remember that the location needs a prepesition ('in Portsmouth' or 'on Hayling Island') to make sense on the site. If you do not want to fill out a field, just put a space in it.";
 $details["card"][0]["card_title"] = "Please enter changes:";
 $details["card"][0]['location'] = $dynamicsitecontent["location"];
 $details["card"][0]['phonenumber'] = $dynamicsitecontent["phonenumber"];
