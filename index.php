@@ -64,7 +64,7 @@ $home["card"][1]["button"][0]["button_name"] = "About Me";
 $home["card"][1]["button"][0]["url"] = "/about";
 $home["card"][2]["card_title"] = "Contact";
 $home["card"][2]["card_text0"] = "You can contact me on:";
-$home["card"][2]["list"][0]["list_content"] = "<a href='contact@dianabeavenphysiotherapy.com'>Email</a>";
+$home["card"][2]["list"][0]["list_content"] = "<a href='mailto:contact@dianabeavenphysiotherapy.com'>Email</a>";
 $home["card"][2]["list"][1]["list_content"] = $dynamicsitecontent["phonenumber"];
 $home["card"][2]["list"][2]["list_content"] = "Or contact me through the form on this site.";
 $home["card"][2]["card_text"] = "I am currently located ". $dynamicsitecontent["location"]. ".";
