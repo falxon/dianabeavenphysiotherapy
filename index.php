@@ -205,7 +205,7 @@ $aquatic["card"][2]["button"][0]["url"] = "/contact";
 $contact["title"] = "Diana Beaven Physiotherapy - Contact";
 $contact = array_merge($defaultpage, $contact);
 $contact["content"][0]["bs"] = "Contact Me";
-$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work ". $dynamicsitecontent["location"]. ". Find me at:<br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
+$contact["content"][0]["bs_text"] = "You can contact me by phone, email, or using the webform below. I work ". $dynamicsitecontent["location"]. ". <br/>". $dynamicsitecontent["address1"]. "<br/>". $dynamicsitecontent["address2"]. "<br/>". $dynamicsitecontent["address_city"].  "<br/>". $dynamicsitecontent["address_postcode"];
 $contact["card"][0]["card_title"] = "Contact Form";
 $contact["card"][0]["button"][0]["button_name"] = "Submit";
 
